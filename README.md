@@ -32,7 +32,7 @@ Solar-Powered Aeration &amp; Monitoring System for Purification
 
 ▲ Water Quality Monitor
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/28067da0-312a-4c2d-82c1-b8c807d89079/644b53dc-b3ae-409e-8290-a3f03f2b8300/Untitled.png)
+![Untitled]([https://prod-files-secure.s3.us-west-2.amazonaws.com/28067da0-312a-4c2d-82c1-b8c807d89079/644b53dc-b3ae-409e-8290-a3f03f2b8300/Untitled.png](https://www.notion.so/Pond-Water-Quality-IOT-System-281be2731a6043bba31139510fef9ece?pvs=4#5224a2867afb44b48721455de3b0cf36))
 
 ▲ Communication Regenerator
 
