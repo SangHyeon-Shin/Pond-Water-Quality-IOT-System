@@ -4,7 +4,7 @@ Solar-Powered Aeration &amp; Monitoring System for Purification
 
 ![Circuit.png](https://github.com/SinSangHyun/Pond-Water-Quality-IOT-System/blob/main/Circuit.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/28067da0-312a-4c2d-82c1-b8c807d89079/10d80fa5-4695-4a51-ac6c-2ac6607e1421/Untitled.png](https://github.com/SinSangHyun/Pond-Water-Quality-IOT-System/blob/main/System%20Architecture.png)
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/28067da0-312a-4c2d-82c1-b8c807d89079/10d80fa5-4695-4a51-ac6c-2ac6607e1421/Untitled.png](https://github.com/SinSangHyun/Pond-Water-Quality-IOT-System/blob/main/System%20Architecture.png))
 
 [Communication_Regenerator-receiver.ino](https://prod-files-secure.s3.us-west-2.amazonaws.com/28067da0-312a-4c2d-82c1-b8c807d89079/d0af59a1-05f0-4469-aee3-2495aabf95f0/Communication_Regenerator-receiver.ino)
 
