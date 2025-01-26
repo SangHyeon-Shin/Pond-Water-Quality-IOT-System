@@ -2,7 +2,7 @@
 Solar-Powered Aeration &amp; Monitoring System for Purification
 ## Pond Water Quality Monitoring & Purification IOT System
 
-![Circuit.png]([https://prod-files-secure.s3.us-west-2.amazonaws.com/28067da0-312a-4c2d-82c1-b8c807d89079/61260bdf-26ab-49bb-b7df-183f50b0a6f9/Circuit.png](https://github.com/SinSangHyun/Pond-Water-Quality-IOT-System/blob/main/Circuit.png))
+![Circuit.png](https://github.com/SinSangHyun/Pond-Water-Quality-IOT-System/blob/main/Circuit.png)
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/28067da0-312a-4c2d-82c1-b8c807d89079/10d80fa5-4695-4a51-ac6c-2ac6607e1421/Untitled.png)
 
