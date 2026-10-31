@@ -9,7 +9,7 @@
 정화는 태양광 폭기 장치가 담당합니다. 용존산소(DO) 센서를 달면 노드가 릴레이로 폭기 장치를 켜고 끕니다.
 
 > **v2.0 (2026-10)**: 측정값을 왜곡하던 펌웨어 결함과 인증정보 노출을 수정하고, 교정·경보·폭기 제어를 추가했습니다.
-> 2024 현장 시험 버전은 태그 [`v1.0-field-test`](https://github.com/SangHyeon-Shin/Pond-Water-Quality-IOT-System/tree/v1.0-field-test)에 그대로 남아 있습니다.
+> 2024 현장 시험 버전은 커밋 [`37dee70`](https://github.com/SangHyeon-Shin/Pond-Water-Quality-IOT-System/tree/37dee7029648153860d80945de4aa5533eba5bde)에서 그대로 볼 수 있습니다.
 > 변경 내역은 [CHANGELOG.md](CHANGELOG.md)에 있습니다.
 
 ## 시스템 구성
@@ -93,7 +93,7 @@ tools/                  폭기 효과 분석 스크립트
 | 공통 코드 (PondCore) | 단위 테스트 15종(검사 199개), g++ `-Werror` + AddressSanitizer/UBSan (CI) | 통과 |
 | 노드 스케치 | avr-gcc 7.3 / AVR core 1.8.6 컴파일 | 플래시 59 %, RAM 31 % (옵션 전부 사용 시 플래시 66 %) |
 | Uno 게이트웨이 | 같은 환경 컴파일 | 플래시 88 %, RAM 61 % |
-| NodeMCU 게이트웨이 | ESP8266 core 3.1.2 컴파일 (CI) | 위 배지 참고 |
+| NodeMCU 게이트웨이 | ESP8266 core 3.1.2 컴파일 (CI) | 플래시 24 %, RAM 37 % |
 | 노드 동작 | 스케치를 수정 없이 PC의 모의 하드웨어에서 실행: 정상 송신, 교정 명령, 재부팅, 센서·무선 장애, 폭기 제어 | 통과 |
 | 실제 하드웨어 | — | **미실시**: 업로드 후 교정과 현장 재시험이 필요합니다 |
 
