@@ -1,0 +1,27 @@
+Category,Name,Unit price (KRW),Quantity,Price (KRW),Link,Used in,Note
+Sensor,Gravity : Analog pH sensor / Meter Pro Kit V2 [SEN0169-V2] / (P011850355),96470,1,96470,https://www.icbanq.com/P011850355,Pond node,PH_BOARD_VERSION 2 for the V2 signal board; calibrate with pH 7.00 and 4.00 buffers
+Sensor,Waterproof DS18B20 Digital Temperature Sensor [DFR0198] / (P005637365),10230,1,10230,https://www.icbanq.com/P005637365,Pond node,4.7 kOhm pull-up (row 9)
+Sensor,Analog TDS Sensor / (P012244791),17490,1,17490,https://www.icbanq.com/P012244791,Pond node,Optional: power from D5 (PIN_TDS_POWER) to avoid pH interference
+Sensor,Gravity: Analog turbidity sensor [SEN0189] / (P006971504),14740,1,14740,https://www.icbanq.com/P006971504,Pond node,Board switch on 'A' (analog); the top of the probe is not waterproof
+MCU,Arduino Uno,14850,1,14850,https://www.icbanq.com/P007320613,Pond node,
+Prototyping,Prototype Shield + Mini Bread Board,9240,1,9240,https://www.icbanq.com/P008202504,Pond node,
+Prototyping,Jumper wire,9570,1,9570,https://www.icbanq.com/P014859021,Node + gateway,
+Passive,4.7k ohm resistance,1496,1,1496,https://www.icbanq.com/P000101177,Pond node,DS18B20 pull-up
+Control,Relay Module,704,1,704,https://www.icbanq.com/P014159955,Pond node (optional),Aerator control; wire the pump through the NC contact (fail-safe)
+Enclosure,Transparent High Box Waterproof Plastic Breaker Box Power Distribution Box (250x350x160),20500,1,20500,https://smartstore.naver.com/mk053/products/8309510861?NaPm=ct%3Dltzy6gcw%7Cci%3D6be1578b2a26350ba45c8b388b11cee80448ad5c%7Ctr%3Dslsl%7Csn%3D715682%7Chk%3Def11044dd8f05eb58d1d739d52679390bd591ec7,Pond node,Add cable glands for the probe cables
+Gateway,NodeMCU V2 ESP-12N Wi-Fi development board [SZH-WFBB-017],3190,1,3190,https://www.icbanq.com/P008113757,Gateway (recommended),firmware/gateway_nodemcu replaces Uno + ESP-01
+Aeration,a solar bubble diffuser 38W,275400,1,275400,https://item.gmarket.co.kr/Item?goodscode=3151022653&GoodsSale=Y&jaehuid=200013954&srsltid=AfmBOoq-2KoZN0oT7iAx2vDw0oBunNPAqMWObWaAzc6JIn29bOmxakT1wVA,Aeration,Standalone solar aerator; optional relay control
+RF,NRF24L01 adapter board (HAM6604),1078,2,2156,https://www.icbanq.com/P015186755,Node + gateway,3.3 V regulator for the PA+LNA module
+RF,NRF24L01 with antenna B52,9570,2,19140,https://www.icbanq.com/P011849541,Node + gateway,Add a 10-100 uF capacitor at the module
+Power,[SR2240]Coms G POWER powerbank 10000mAh,21010,1,21010,https://www.icbanq.com/P013039325,Pond node,About 1.5-2.5 days at 100-160 mA (estimate); solar + battery recommended
+MCU,Arduino Uno (gateway of the 2024 build),14850,1,14850,https://www.icbanq.com/P007320613,Gateway (2024 build),Same item as row 6
+Prototyping,Prototype Shield + Mini Bread Board (gateway of the 2024 build),9240,1,9240,https://www.icbanq.com/P008202504,Gateway (2024 build),Same item as row 7
+Gateway,ESP-01 (ESP8266) Wi-Fi module + 5 V adapter board,,1,,,Gateway (2024 build),AT firmware set to 9600 baud; price not recorded
+Sensor,Gravity: Analog Dissolved Oxygen Sensor [DFRobot SEN0237],,1,,,Pond node (optional),Needed for aerator control; price to be checked
+Sensor,Gravity: Analog Signal Isolator [DFRobot DFR0504],,1,,,Pond node (optional),Alternative to PIN_TDS_POWER for pH/TDS isolation; price to be checked
+Calibration,pH buffer solutions 4.00 and 7.00,,1,,,Calibration,Price to be checked
+Calibration,EC/TDS standard 1413 uS/cm (707 ppm),,1,,,Calibration,Price to be checked
+Calibration,Turbidity standard (e.g. 100 NTU) or access to a turbidimeter,,1,,,Calibration,Price to be checked
+Passive,Electrolytic capacitor 10-100 uF,,2,,,Node + gateway,At each nRF24L01 module; price to be checked
+Enclosure,Cable glands (PG7/PG9),,4,,,Pond node,Price to be checked
+,Sum (rows with a price),,,540276,,,

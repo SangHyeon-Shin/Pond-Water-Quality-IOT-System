@@ -1,0 +1,22 @@
+# Credentials: copy secrets.example.h to secrets.h locally, never commit it (SECURITY.md)
+secrets.h
+
+# Third-party libraries installed here when firmware/ is used as the Arduino sketchbook
+firmware/libraries/*
+!firmware/libraries/PondCore/
+
+# Build outputs
+build/
+*.elf
+*.hex
+*.bin
+*.eep
+.pio/
+
+# Editors, OS, Python
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

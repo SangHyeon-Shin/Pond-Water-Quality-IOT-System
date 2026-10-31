@@ -1,0 +1,70 @@
+name: firmware
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PondCore library (g++, AddressSanitizer + UBSan)
+        run: make -C firmware/test
+      - name: Analysis tool
+        run: python3 -m unittest discover -s tools -v
+
+  secrets-check:
+    name: No credentials in the repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check tracked files
+        run: |
+          if git ls-files | grep -E '(^|/)secrets\.h$'; then
+            echo "::error::secrets.h must never be committed (see SECURITY.md)"; exit 1
+          fi
+          if git grep -nE 'BLYNK_AUTH_TOKEN[[:space:]]+"[A-Za-z0-9_-]{32}"'; then
+            echo "::error::a Blynk auth token is hard-coded in the sources"; exit 1
+          fi
+
+  compile:
+    name: Compile ${{ matrix.sketch }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - sketch: pond_node
+            fqbn: arduino:avr:uno
+          - sketch: gateway_uno_esp01
+            fqbn: arduino:avr:uno
+          - sketch: gateway_nodemcu
+            fqbn: esp8266:esp8266:nodemcuv2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/setup-arduino-cli@v2
+      - name: Install cores and pinned libraries
+        run: |
+          arduino-cli config init
+          arduino-cli config add board_manager.additional_urls https://arduino.esp8266.com/stable/package_esp8266com_index.json
+          arduino-cli core update-index
+          if [[ "${{ matrix.fqbn }}" == esp8266:* ]]; then
+            arduino-cli core install esp8266:esp8266@3.1.2
+          else
+            arduino-cli core install arduino:avr@1.8.6
+          fi
+          arduino-cli lib install "RF24@1.6.2" "OneWire@2.3.8" "DallasTemperature@4.0.6" "Blynk@1.4.0"
+          git clone --quiet https://github.com/vshymanskyy/BlynkESP8266 "$RUNNER_TEMP/extra-libs/BlynkESP8266"
+          git -C "$RUNNER_TEMP/extra-libs/BlynkESP8266" checkout --quiet 06e621a4323cb128bf104427cddca1fb5491d318
+      - name: Use placeholder secrets
+        run: for d in firmware/gateway_*; do cp "$d/secrets.example.h" "$d/secrets.h"; done
+      - name: Compile
+        run: >
+          arduino-cli compile --fqbn ${{ matrix.fqbn }} --warnings default
+          --libraries firmware/libraries --libraries "$RUNNER_TEMP/extra-libs"
+          firmware/${{ matrix.sketch }}
