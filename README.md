@@ -9,7 +9,7 @@
 정화는 태양광 폭기 장치가 담당합니다. 용존산소(DO) 센서를 달면 노드가 릴레이로 폭기 장치를 켜고 끕니다.
 
 > **v2.0 (2026-10)**: 측정값을 왜곡하던 펌웨어 결함과 인증정보 노출을 수정하고, 교정·경보·폭기 제어를 추가했습니다.
-> 2024 현장 시험 버전은 커밋 [`37dee70`](https://github.com/SangHyeon-Shin/Pond-Water-Quality-IOT-System/tree/37dee7029648153860d80945de4aa5533eba5bde)에서 그대로 볼 수 있습니다.
+> 2024 현장 시험 버전은 커밋 [`737bb3b`](https://github.com/SangHyeon-Shin/Pond-Water-Quality-IOT-System/tree/737bb3b9cda6312cb4c29ed9fdadd37eeb58a602)에서 그대로 볼 수 있습니다.
 > 변경 내역은 [CHANGELOG.md](CHANGELOG.md)에 있습니다.
 
 ## 시스템 구성
